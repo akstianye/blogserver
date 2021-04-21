@@ -236,6 +236,24 @@
       </tags>
   </entry>
   <entry>
+    <title>apt换国内源</title>
+    <url>/posts/a84f8eca/</url>
+    <content><![CDATA[<div style="display:none"><div>
+<a id="more"></a>
+
+
+<h3 id="1-备份原配置文件"><a href="#1-备份原配置文件" class="headerlink" title="1. 备份原配置文件"></a>1. 备份原配置文件</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mv &#x2F;etc&#x2F;apt&#x2F;sources.list &#x2F;etc&#x2F;apt&#x2F;sources.list.bak</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="2-修改sources-list"><a href="#2-修改sources-list" class="headerlink" title="2. 修改sources.list"></a>2. 修改sources.list</h3><p>stretch(debian9) </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;debian stretch main contrib non-free</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;debian stretch main contrib non-free</span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;debian stretch-updates main contrib non-free</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;debian stretch-updates main contrib non-free</span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;debian-security stretch&#x2F;updates main contrib non-free</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;debian-security stretch&#x2F;updates main contrib non-free</span><br></pre></td></tr></table></figure>
+<h3 id="3-更新源"><a href="#3-更新源" class="headerlink" title="3. 更新源"></a>3. 更新源</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">apt-get update</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>apt</tag>
+        <tag>镜像</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux查看最大文件占用</title>
     <url>/posts/5ef19cda/</url>
     <content><![CDATA[<div style="display:none"><div>
@@ -273,43 +291,6 @@
       <tags>
         <tag>URL</tag>
         <tag>编码</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>apt换国内源</title>
-    <url>/posts/a84f8eca/</url>
-    <content><![CDATA[<div style="display:none"><div>
-<a id="more"></a>
-
-
-<h3 id="1-备份原配置文件"><a href="#1-备份原配置文件" class="headerlink" title="1. 备份原配置文件"></a>1. 备份原配置文件</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mv &#x2F;etc&#x2F;apt&#x2F;sources.list &#x2F;etc&#x2F;apt&#x2F;sources.list.bak</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="2-修改sources-list"><a href="#2-修改sources-list" class="headerlink" title="2. 修改sources.list"></a>2. 修改sources.list</h3><p>stretch(debian9) </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;debian stretch main contrib non-free</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;debian stretch main contrib non-free</span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;debian stretch-updates main contrib non-free</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;debian stretch-updates main contrib non-free</span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;debian-security stretch&#x2F;updates main contrib non-free</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;debian-security stretch&#x2F;updates main contrib non-free</span><br></pre></td></tr></table></figure>
-<h3 id="3-更新源"><a href="#3-更新源" class="headerlink" title="3. 更新源"></a>3. 更新源</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">apt-get update</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>apt</tag>
-        <tag>镜像</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>dns解析中各种记录的说明</title>
-    <url>/posts/b237770b/</url>
-    <content><![CDATA[<div style="display:none"><div>
-<a id="more"></a>
-
-
-<h4 id="A记录"><a href="#A记录" class="headerlink" title="A记录"></a>A记录</h4><p>将域名指向一个IPV4地址</p>
-<h4 id="CNAME记录"><a href="#CNAME记录" class="headerlink" title="CNAME记录"></a>CNAME记录</h4><p>将域名指向一个域名，访问此域名等同于访问被指向的域名</p>
-<h4 id="MX记录"><a href="#MX记录" class="headerlink" title="MX记录"></a>MX记录</h4><p>建立电子邮箱服务，指向邮箱服务商提供的MX记录地址</p>
-<h4 id="NS记录"><a href="#NS记录" class="headerlink" title="NS记录"></a>NS记录</h4><p>域名解析服务器记录，可将子域名指定某个域名服务器来解析</p>
-<h4 id="TXT记录"><a href="#TXT记录" class="headerlink" title="TXT记录"></a>TXT记录</h4><p>可任意填写，可为空，一般做一些验证时使用。</p>
-<h4 id="AAAA记录"><a href="#AAAA记录" class="headerlink" title="AAAA记录"></a>AAAA记录</h4><p>将域名指向一个IPV6地址</p>
-<h4 id="SRV记录"><a href="#SRV记录" class="headerlink" title="SRV记录"></a>SRV记录</h4><p>SRV记录了哪台计算机提供了哪个服务，格式为：服务名.协议类型</p>
-]]></content>
-      <tags>
-        <tag>dns</tag>
       </tags>
   </entry>
   <entry>
@@ -411,6 +392,25 @@
       </tags>
   </entry>
   <entry>
+    <title>dns解析中各种记录的说明</title>
+    <url>/posts/b237770b/</url>
+    <content><![CDATA[<div style="display:none"><div>
+<a id="more"></a>
+
+
+<h4 id="A记录"><a href="#A记录" class="headerlink" title="A记录"></a>A记录</h4><p>将域名指向一个IPV4地址</p>
+<h4 id="CNAME记录"><a href="#CNAME记录" class="headerlink" title="CNAME记录"></a>CNAME记录</h4><p>将域名指向一个域名，访问此域名等同于访问被指向的域名</p>
+<h4 id="MX记录"><a href="#MX记录" class="headerlink" title="MX记录"></a>MX记录</h4><p>建立电子邮箱服务，指向邮箱服务商提供的MX记录地址</p>
+<h4 id="NS记录"><a href="#NS记录" class="headerlink" title="NS记录"></a>NS记录</h4><p>域名解析服务器记录，可将子域名指定某个域名服务器来解析</p>
+<h4 id="TXT记录"><a href="#TXT记录" class="headerlink" title="TXT记录"></a>TXT记录</h4><p>可任意填写，可为空，一般做一些验证时使用。</p>
+<h4 id="AAAA记录"><a href="#AAAA记录" class="headerlink" title="AAAA记录"></a>AAAA记录</h4><p>将域名指向一个IPV6地址</p>
+<h4 id="SRV记录"><a href="#SRV记录" class="headerlink" title="SRV记录"></a>SRV记录</h4><p>SRV记录了哪台计算机提供了哪个服务，格式为：服务名.协议类型</p>
+]]></content>
+      <tags>
+        <tag>dns</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>IDEA技巧收集</title>
     <url>/posts/ec9abed7/</url>
     <content><![CDATA[<div style="display:none"><div>
@@ -492,6 +492,29 @@
         <tag>java</tag>
         <tag>设计模式</tag>
         <tag>单例</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>springboot devtools 热部署</title>
+    <url>/posts/5af71517/</url>
+    <content><![CDATA[<div style="display:none"><div>
+<a id="more"></a>
+
+
+<h5 id="添加pom依赖"><a href="#添加pom依赖" class="headerlink" title="添加pom依赖"></a>添加pom依赖</h5><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-devtools<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">optional</span>&gt;</span>true<span class="tag">&lt;/<span class="name">optional</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>runtime<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>maven plugin中添加</code></p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">            	<span class="tag">&lt;<span class="name">fork</span>&gt;</span>true<span class="tag">&lt;/<span class="name">fork</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">                <span class="comment">&lt;!-- spring热部署--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springloaded<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.6.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h5 id="application-yml中添加"><a href="#application-yml中添加" class="headerlink" title="application.yml中添加"></a>application.yml中添加</h5><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">devtools:</span></span><br><span class="line">    <span class="attr">restart:</span></span><br><span class="line">      <span class="comment">#热部署生效</span></span><br><span class="line">      <span class="attr">enabled:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>当我们修改了java类后，IDEA默认是不自动编译的，而spring-boot-devtools又是监测classpath下的文件发生变化才会重启应用 </p>
+<ul>
+<li>Ctrl+F9重新编译一下即可</li>
+<li>1. <code>File</code>&gt;&gt;<code>Settings</code>&gt;&gt;<code>Build</code>&gt;&gt;<code>Compiler</code>&gt;&gt;<code>Build Project automatically</code><br>2. <code>ctrl + shift + alt + /</code>,选择<code>Registry</code>,勾上 <code>Compiler autoMake allow when app running</code></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>springboot</tag>
+        <tag>热部署</tag>
       </tags>
   </entry>
   <entry>
@@ -669,29 +692,6 @@
       </tags>
   </entry>
   <entry>
-    <title>springboot devtools 热部署</title>
-    <url>/posts/5af71517/</url>
-    <content><![CDATA[<div style="display:none"><div>
-<a id="more"></a>
-
-
-<h5 id="添加pom依赖"><a href="#添加pom依赖" class="headerlink" title="添加pom依赖"></a>添加pom依赖</h5><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-devtools<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">optional</span>&gt;</span>true<span class="tag">&lt;/<span class="name">optional</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>runtime<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><code>maven plugin中添加</code></p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">            	<span class="tag">&lt;<span class="name">fork</span>&gt;</span>true<span class="tag">&lt;/<span class="name">fork</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">                <span class="comment">&lt;!-- spring热部署--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springloaded<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.6.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h5 id="application-yml中添加"><a href="#application-yml中添加" class="headerlink" title="application.yml中添加"></a>application.yml中添加</h5><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">devtools:</span></span><br><span class="line">    <span class="attr">restart:</span></span><br><span class="line">      <span class="comment">#热部署生效</span></span><br><span class="line">      <span class="attr">enabled:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p>当我们修改了java类后，IDEA默认是不自动编译的，而spring-boot-devtools又是监测classpath下的文件发生变化才会重启应用 </p>
-<ul>
-<li>Ctrl+F9重新编译一下即可</li>
-<li>1. <code>File</code>&gt;&gt;<code>Settings</code>&gt;&gt;<code>Build</code>&gt;&gt;<code>Compiler</code>&gt;&gt;<code>Build Project automatically</code><br>2. <code>ctrl + shift + alt + /</code>,选择<code>Registry</code>,勾上 <code>Compiler autoMake allow when app running</code></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>springboot</tag>
-        <tag>热部署</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>windows下使用vundle管理gvim插件</title>
     <url>/posts/d6218fbd/</url>
     <content><![CDATA[<div style="display:none"><div>
@@ -808,6 +808,69 @@
       <tags>
         <tag>https</tag>
         <tag>nginx</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>小米手环NFC模拟加密卡</title>
+    <url>/posts/1fd4902a/</url>
+    <content><![CDATA[<div style="display:none"><div>
+<a id="more"></a>
+
+
+
+<h4 id="工具准备"><a href="#工具准备" class="headerlink" title="工具准备"></a>工具准备</h4><ul>
+<li>小米手环NFC版</li>
+<li>pn532或者其他nfc读写工具</li>
+<li>MifareOneTool软件</li>
+<li>原始门禁卡</li>
+<li>中间卡</li>
+</ul>
+<h4 id="提取原始卡信息"><a href="#提取原始卡信息" class="headerlink" title="提取原始卡信息"></a>提取原始卡信息</h4><ol>
+<li>连接<code>pn532</code>到PC，并打开<code>MifareOneTool</code></li>
+<li><code>复制卡模式</code>选项卡下</li>
+<li>点击<code>检测连接</code>(控制台输出设备信息后表示pn532连接成功)</li>
+<li>将<code>原始门禁卡</code>放在pn532上</li>
+<li>点击<code>扫描卡片</code>(控制台输出卡片信息代表检测到卡片)</li>
+<li>点击<code>一键解原卡</code>(成功后会弹出保存窗口，命名后保存文件，例如origin.dump)</li>
+</ol>
+<h4 id="2选1-写入非加密信息到中间卡-lt-中间卡无法修改卡号-gt"><a href="#2选1-写入非加密信息到中间卡-lt-中间卡无法修改卡号-gt" class="headerlink" title="[2选1]写入非加密信息到中间卡&lt;中间卡无法修改卡号&gt;"></a>[2选1]写入非加密信息到中间卡&lt;中间卡<code>无法</code>修改卡号&gt;</h4><ol>
+<li>将<code>中间卡</code>放在pn532上</li>
+<li><code>高级模式</code>选项卡下</li>
+<li>点击<code>写M1</code>，选择origin.dump文件，如有弹窗，选<code>取消</code>(以白卡方式写入)<br>此步骤会写入(非加密+加密)数据，此时用手环模拟会提示加密卡无法模拟<br> <strong>注意：</strong>若此处写入失败，可以参考<code>附录</code>处理</li>
+<li>点击<code>选择key.mfd</code>，右下角切换到.dump文件，选择origin.dump文件</li>
+<li>点击<code>清M1</code>，如有弹窗，选<code>取消</code>(以白卡方式写入)<br>此步骤会清理(加密)部分数据</li>
+</ol>
+<h4 id="2选1-写入非加密信息到中间卡-lt-中间卡可以修改卡号-gt"><a href="#2选1-写入非加密信息到中间卡-lt-中间卡可以修改卡号-gt" class="headerlink" title="[2选1]写入非加密信息到中间卡&lt;中间卡可以修改卡号&gt;"></a>[2选1]写入非加密信息到中间卡&lt;中间卡<code>可以</code>修改卡号&gt;</h4><ol>
+<li>将<code>中间卡</code>放在pn532上</li>
+<li><code>复制卡模式</code>选项卡下，<code>[3]写入新卡</code>块中</li>
+<li>点击<code>写(UF)UID卡</code>，选择origin.dump文件，<br>此步骤会写入(非加密&lt;包括卡号&gt;+加密)数据，此时用手环模拟会提示加密卡无法模拟</li>
+<li><code>高级模式</code>选项卡下，点击<code>选择key.mfd</code>，右下角切换到.dump文件，选择origin.dump文件</li>
+<li>点击<code>清M1</code>，如有弹窗，选<code>取消</code>(以白卡方式写入)<br>此步骤会清理(加密)部分数据</li>
+</ol>
+<h4 id="手环模拟卡片"><a href="#手环模拟卡片" class="headerlink" title="手环模拟卡片"></a>手环模拟卡片</h4><ol>
+<li>打开小米运动-&gt;我的-&gt;小米手环nfc-&gt;门卡模拟</li>
+<li>将手环靠近<code>原始门禁卡</code>(中间卡)</li>
+<li>手环模拟成功后命名</li>
+</ol>
+<h4 id="写入加密信息到手环"><a href="#写入加密信息到手环" class="headerlink" title="写入加密信息到手环"></a>写入加密信息到手环</h4><ol>
+<li>打开MifareOneTool</li>
+<li><code>高级模式</code>选项卡下</li>
+<li>点一下<code>选择key.mfd</code>，弹出框后点<code>取消</code>(为了清理选项)</li>
+<li>点击<code>写M1</code>，选择origin.dump文件，如有弹窗，选<code>取消</code>(以白卡方式写入)</li>
+<li>如手环上有多张卡片，则先启用刚刚模拟的这张</li>
+<li>手环靠近pn532(建议提前将手环放在pn532旁边)</li>
+<li>控制台输出(63/64 写入成功)即代表成功</li>
+</ol>
+<h4 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h4><ol>
+<li>写入非加密信息到中间卡失败？<br>中间卡的<code>加密数据区</code>需要为<code>空</code>才可以写入新的加密数据<br>此时可以使用中间卡对应的dump文件<code>清M1</code></li>
+<li>没有中间卡的dump文件？<br>参考<code>提取原始卡数据信息</code>步骤，提取中间卡的dump文件</li>
+<li>使用<code>写M1</code>功能前，要注意下方选择key的按钮不能有值，即显示<code>选择key.mfd</code><br>若不是，则点击一下该按钮，再点取消，清空选择</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>小米手环</tag>
+        <tag>NFC</tag>
+        <tag>门禁卡模拟</tag>
       </tags>
   </entry>
   <entry>
@@ -957,69 +1020,6 @@
 ]]></content>
       <tags>
         <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>小米手环NFC模拟加密卡</title>
-    <url>/posts/1fd4902a/</url>
-    <content><![CDATA[<div style="display:none"><div>
-<a id="more"></a>
-
-
-
-<h4 id="工具准备"><a href="#工具准备" class="headerlink" title="工具准备"></a>工具准备</h4><ul>
-<li>小米手环NFC版</li>
-<li>pn532或者其他nfc读写工具</li>
-<li>MifareOneTool软件</li>
-<li>原始门禁卡</li>
-<li>中间卡</li>
-</ul>
-<h4 id="提取原始卡信息"><a href="#提取原始卡信息" class="headerlink" title="提取原始卡信息"></a>提取原始卡信息</h4><ol>
-<li>连接<code>pn532</code>到PC，并打开<code>MifareOneTool</code></li>
-<li><code>复制卡模式</code>选项卡下</li>
-<li>点击<code>检测连接</code>(控制台输出设备信息后表示pn532连接成功)</li>
-<li>将<code>原始门禁卡</code>放在pn532上</li>
-<li>点击<code>扫描卡片</code>(控制台输出卡片信息代表检测到卡片)</li>
-<li>点击<code>一键解原卡</code>(成功后会弹出保存窗口，命名后保存文件，例如origin.dump)</li>
-</ol>
-<h4 id="2选1-写入非加密信息到中间卡-lt-中间卡无法修改卡号-gt"><a href="#2选1-写入非加密信息到中间卡-lt-中间卡无法修改卡号-gt" class="headerlink" title="[2选1]写入非加密信息到中间卡&lt;中间卡无法修改卡号&gt;"></a>[2选1]写入非加密信息到中间卡&lt;中间卡<code>无法</code>修改卡号&gt;</h4><ol>
-<li>将<code>中间卡</code>放在pn532上</li>
-<li><code>高级模式</code>选项卡下</li>
-<li>点击<code>写M1</code>，选择origin.dump文件，如有弹窗，选<code>取消</code>(以白卡方式写入)<br>此步骤会写入(非加密+加密)数据，此时用手环模拟会提示加密卡无法模拟<br> <strong>注意：</strong>若此处写入失败，可以参考<code>附录</code>处理</li>
-<li>点击<code>选择key.mfd</code>，右下角切换到.dump文件，选择origin.dump文件</li>
-<li>点击<code>清M1</code>，如有弹窗，选<code>取消</code>(以白卡方式写入)<br>此步骤会清理(加密)部分数据</li>
-</ol>
-<h4 id="2选1-写入非加密信息到中间卡-lt-中间卡可以修改卡号-gt"><a href="#2选1-写入非加密信息到中间卡-lt-中间卡可以修改卡号-gt" class="headerlink" title="[2选1]写入非加密信息到中间卡&lt;中间卡可以修改卡号&gt;"></a>[2选1]写入非加密信息到中间卡&lt;中间卡<code>可以</code>修改卡号&gt;</h4><ol>
-<li>将<code>中间卡</code>放在pn532上</li>
-<li><code>复制卡模式</code>选项卡下，<code>[3]写入新卡</code>块中</li>
-<li>点击<code>写(UF)UID卡</code>，选择origin.dump文件，<br>此步骤会写入(非加密&lt;包括卡号&gt;+加密)数据，此时用手环模拟会提示加密卡无法模拟</li>
-<li><code>高级模式</code>选项卡下，点击<code>选择key.mfd</code>，右下角切换到.dump文件，选择origin.dump文件</li>
-<li>点击<code>清M1</code>，如有弹窗，选<code>取消</code>(以白卡方式写入)<br>此步骤会清理(加密)部分数据</li>
-</ol>
-<h4 id="手环模拟卡片"><a href="#手环模拟卡片" class="headerlink" title="手环模拟卡片"></a>手环模拟卡片</h4><ol>
-<li>打开小米运动-&gt;我的-&gt;小米手环nfc-&gt;门卡模拟</li>
-<li>将手环靠近<code>原始门禁卡</code>(中间卡)</li>
-<li>手环模拟成功后命名</li>
-</ol>
-<h4 id="写入加密信息到手环"><a href="#写入加密信息到手环" class="headerlink" title="写入加密信息到手环"></a>写入加密信息到手环</h4><ol>
-<li>打开MifareOneTool</li>
-<li><code>高级模式</code>选项卡下</li>
-<li>点一下<code>选择key.mfd</code>，弹出框后点<code>取消</code>(为了清理选项)</li>
-<li>点击<code>写M1</code>，选择origin.dump文件，如有弹窗，选<code>取消</code>(以白卡方式写入)</li>
-<li>如手环上有多张卡片，则先启用刚刚模拟的这张</li>
-<li>手环靠近pn532(建议提前将手环放在pn532旁边)</li>
-<li>控制台输出(63/64 写入成功)即代表成功</li>
-</ol>
-<h4 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h4><ol>
-<li>写入非加密信息到中间卡失败？<br>中间卡的<code>加密数据区</code>需要为<code>空</code>才可以写入新的加密数据<br>此时可以使用中间卡对应的dump文件<code>清M1</code></li>
-<li>没有中间卡的dump文件？<br>参考<code>提取原始卡数据信息</code>步骤，提取中间卡的dump文件</li>
-<li>使用<code>写M1</code>功能前，要注意下方选择key的按钮不能有值，即显示<code>选择key.mfd</code><br>若不是，则点击一下该按钮，再点取消，清空选择</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>小米手环</tag>
-        <tag>NFC</tag>
-        <tag>门禁卡模拟</tag>
       </tags>
   </entry>
   <entry>
