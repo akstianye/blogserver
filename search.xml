@@ -102,6 +102,55 @@
       </tags>
   </entry>
   <entry>
+    <title>centos7挂载硬盘</title>
+    <url>/posts/e6ac7476/</url>
+    <content><![CDATA[<p><span></span></p>
+<a id="more"></a>
+
+
+
+<h2 id="1-查看硬盘"><a href="#1-查看硬盘" class="headerlink" title="1. 查看硬盘"></a>1. 查看硬盘</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">fdisk –l</span><br></pre></td></tr></table></figure>
+<h2 id="2-硬盘分区"><a href="#2-硬盘分区" class="headerlink" title="2. 硬盘分区"></a>2. 硬盘分区</h2><p>其中<code>vdb</code>为第一步中查到的硬盘设备名</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;sbin&#x2F;fdisk &#x2F;dev&#x2F;vdb</span><br></pre></td></tr></table></figure>
+
+<p><code>tips</code> :下面几步基本一直回车，最后输入q退出</p>
+<blockquote>
+<p>输入n进行分区</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Command (m for help): n</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>选择分区类型（p主分区）</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Select (default p): p</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>选择分区个数（也是分区id） </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Partition number (1-4, default 1): 1</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>选择分区空间大小</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Last sector, +sectors or +size&#123;K,M,G&#125; (2048-1953525167, default 1953525167): +300GB</span><br></pre></td></tr></table></figure>
+<h2 id="3-格式化分区"><a href="#3-格式化分区" class="headerlink" title="3. 格式化分区"></a>3. 格式化分区</h2><p><code>tips</code>:这里先查看一下已有硬盘格式 使用 <code>df -T</code></p>
+<p>将新分区格式化为ext4文件系统</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkfs -t ext4 &#x2F;dev&#x2F;vdb</span><br></pre></td></tr></table></figure>
+<h2 id="4-挂载硬盘"><a href="#4-挂载硬盘" class="headerlink" title="4. 挂载硬盘"></a>4. 挂载硬盘</h2><p>创建挂载点，在根目录下创建storage目录</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir &#x2F;storage</span><br></pre></td></tr></table></figure>
+<p>将<code>/dev/vdb</code>挂载到<code>/storage</code>下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mount &#x2F;dev&#x2F;vdb &#x2F;storage</span><br></pre></td></tr></table></figure>
+<h2 id="5-设置开机启动自动挂载硬盘"><a href="#5-设置开机启动自动挂载硬盘" class="headerlink" title="5. 设置开机启动自动挂载硬盘"></a>5. 设置开机启动自动挂载硬盘</h2><p>新创建的分区不能开机自动挂载，每次重启机器都要手动挂载。</p>
+<p>设置开机自动挂载需要修改<code>/etc/fstab</code>文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;fstab</span><br></pre></td></tr></table></figure>
+<p>在末尾添加</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;dev&#x2F;vdb &#x2F;storage ext4 defaults 1 2</span><br></pre></td></tr></table></figure>
+<h2 id="6-取消挂载"><a href="#6-取消挂载" class="headerlink" title="6. 取消挂载"></a>6. 取消挂载</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">unmount &#x2F;dev&#x2F;vdb</span><br></pre></td></tr></table></figure>
+<p>移除原先添加的启动自动挂载</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;fstab</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Centos</tag>
+        <tag>文件</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Effective Java 笔记(一)</title>
     <url>/posts/f9ac33e3/</url>
     <content><![CDATA[<p><span></span></p>
@@ -184,55 +233,6 @@
 ]]></content>
       <tags>
         <tag>http</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>centos7挂载硬盘</title>
-    <url>/posts/e6ac7476/</url>
-    <content><![CDATA[<p><span></span></p>
-<a id="more"></a>
-
-
-
-<h2 id="1-查看硬盘"><a href="#1-查看硬盘" class="headerlink" title="1. 查看硬盘"></a>1. 查看硬盘</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">fdisk –l</span><br></pre></td></tr></table></figure>
-<h2 id="2-硬盘分区"><a href="#2-硬盘分区" class="headerlink" title="2. 硬盘分区"></a>2. 硬盘分区</h2><p>其中<code>vdb</code>为第一步中查到的硬盘设备名</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;sbin&#x2F;fdisk &#x2F;dev&#x2F;vdb</span><br></pre></td></tr></table></figure>
-
-<p><code>tips</code> :下面几步基本一直回车，最后输入q退出</p>
-<blockquote>
-<p>输入n进行分区</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Command (m for help): n</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>选择分区类型（p主分区）</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Select (default p): p</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>选择分区个数（也是分区id） </p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Partition number (1-4, default 1): 1</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>选择分区空间大小</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Last sector, +sectors or +size&#123;K,M,G&#125; (2048-1953525167, default 1953525167): +300GB</span><br></pre></td></tr></table></figure>
-<h2 id="3-格式化分区"><a href="#3-格式化分区" class="headerlink" title="3. 格式化分区"></a>3. 格式化分区</h2><p><code>tips</code>:这里先查看一下已有硬盘格式 使用 <code>df -T</code></p>
-<p>将新分区格式化为ext4文件系统</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkfs -t ext4 &#x2F;dev&#x2F;vdb</span><br></pre></td></tr></table></figure>
-<h2 id="4-挂载硬盘"><a href="#4-挂载硬盘" class="headerlink" title="4. 挂载硬盘"></a>4. 挂载硬盘</h2><p>创建挂载点，在根目录下创建storage目录</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir &#x2F;storage</span><br></pre></td></tr></table></figure>
-<p>将<code>/dev/vdb</code>挂载到<code>/storage</code>下</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mount &#x2F;dev&#x2F;vdb &#x2F;storage</span><br></pre></td></tr></table></figure>
-<h2 id="5-设置开机启动自动挂载硬盘"><a href="#5-设置开机启动自动挂载硬盘" class="headerlink" title="5. 设置开机启动自动挂载硬盘"></a>5. 设置开机启动自动挂载硬盘</h2><p>新创建的分区不能开机自动挂载，每次重启机器都要手动挂载。</p>
-<p>设置开机自动挂载需要修改<code>/etc/fstab</code>文件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;fstab</span><br></pre></td></tr></table></figure>
-<p>在末尾添加</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;dev&#x2F;vdb &#x2F;storage ext4 defaults 1 2</span><br></pre></td></tr></table></figure>
-<h2 id="6-取消挂载"><a href="#6-取消挂载" class="headerlink" title="6. 取消挂载"></a>6. 取消挂载</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">unmount &#x2F;dev&#x2F;vdb</span><br></pre></td></tr></table></figure>
-<p>移除原先添加的启动自动挂载</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;fstab</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>Centos</tag>
-        <tag>文件</tag>
       </tags>
   </entry>
   <entry>
