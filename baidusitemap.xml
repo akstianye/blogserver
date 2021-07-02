@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.akstianye.moe/posts/1fd4902a/</loc>
+    <lastmod>2021-07-02</lastmod>
+  </url>
+  <url>
     <loc>https://blog.akstianye.moe/posts/f76bf494/</loc>
     <lastmod>2021-05-27</lastmod>
   </url>
@@ -90,10 +94,6 @@
   </url>
   <url>
     <loc>https://blog.akstianye.moe/posts/a84f8eca/</loc>
-    <lastmod>2021-05-27</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.akstianye.moe/posts/1fd4902a/</loc>
     <lastmod>2021-05-27</lastmod>
   </url>
 </urlset> 
