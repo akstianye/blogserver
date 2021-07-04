@@ -962,18 +962,15 @@
   <entry>
     <title>小米手环NFC模拟加密卡</title>
     <url>/posts/1fd4902a/</url>
-    <content><![CDATA[<p><span></span></p>
-<a id="more"></a>
-
-
-
-<h4 id="工具准备"><a href="#工具准备" class="headerlink" title="工具准备"></a>工具准备</h4><ul>
+    <content><![CDATA[<h4 id="工具准备"><a href="#工具准备" class="headerlink" title="工具准备"></a>工具准备</h4><ul>
 <li>小米手环NFC版</li>
 <li>pn532或者其他nfc读写工具</li>
 <li>MifareOneTool软件</li>
 <li>原始门禁卡</li>
 <li>中间卡</li>
 </ul>
+<a id="more"></a>
+
 <h4 id="提取原始卡信息"><a href="#提取原始卡信息" class="headerlink" title="提取原始卡信息"></a>提取原始卡信息</h4><ol>
 <li>连接<code>pn532</code>到PC，并打开<code>MifareOneTool</code></li>
 <li><code>复制卡模式</code>选项卡下</li>
@@ -1020,8 +1017,9 @@
       <tags>
         <tag>小米手环</tag>
         <tag>NFC</tag>
-        <tag>门禁卡</tag>
+        <tag>加密卡</tag>
         <tag>MifareOneTool</tag>
+        <tag>pn532</tag>
       </tags>
   </entry>
   <entry>
